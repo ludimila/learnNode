@@ -1,0 +1,14 @@
+var fs = require('fs')
+var file = process.argv[2]
+
+fs.readFile(file, function (err, contents) {
+	if (err){
+		console.log("Deu Bad")
+	}else{
+		var lines = contents.toString().split('\n').length - 1
+   		console.log(lines)
+	}
+
+})
+
+
